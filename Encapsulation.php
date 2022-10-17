@@ -22,6 +22,8 @@ trait message2
     public function send_message2()
     {
 
+
+
         return $this->send_message;
     }
 }
@@ -43,8 +45,17 @@ class info extends allmessage
         $this->id = $ids;
         $this->hash = $hashs;
         $this->password = $pas;
+
+
+
+
+
+
+
+
         return $this;
     }
+
     public function getform()
     {
         return $this->sets("xuser", "admin", sha1("1"), bin2hex(random_bytes(18)), sha1("mypass"));
@@ -60,8 +71,9 @@ class info extends allmessage
     private $password;
 }
 $um = new info();
-$um->send_message(10)->send_message1(5)->send_message2(0);
+$um->send_message(10)->send_message1(5)->send_message2();
 $um->getform();
+
 echo "<pre>";
 print_r($um);
 echo "</pre>";

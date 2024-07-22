@@ -165,4 +165,5 @@ $bot->processUpdate($update);
 // Call the function to send random messages (add this line to your cron job script)
 $bot->sendRandomMessages();
 
-?>
+
+
